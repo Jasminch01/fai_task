@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Sidebar from "@/Components/Sidebar";
+import Header from "@/Components/Header";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,10 +21,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className}`}
-      >
-        {children}
+      <body className={`${inter.className}`}>
+        <div className="md:flex">
+          <Sidebar />
+          <div className="md:flex-1 lg:w-[20rem] w-full bg-linear-to-l from-[#0f2d50]  to-[#111B3C] rounded-lg">
+            <div className="bg-[#111B3C]">
+              <Header />
+            </div>
+            <div className="">{children}</div>
+          </div>
+        </div>
       </body>
     </html>
   );
