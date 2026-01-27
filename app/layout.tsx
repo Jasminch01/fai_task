@@ -22,13 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <div className="md:flex">
+        <div className="md:flex h-screen overflow-hidden">
           <Sidebar />
-          <div className="md:flex-1 lg:w-[20rem] w-full bg-linear-to-l from-[#0f2d50]  to-[#111B3C] rounded-lg">
+          <div className="md:flex-1 lg:w-[20rem] w-full bg-linear-to-l from-[#0f2d50]  to-[#111B3C] flex flex-col h-screen ">
             <div className="bg-[#111B3C]">
               <Header />
             </div>
-            <div className="">{children}</div>
+            <div className="flex-1 overflow-y-auto scrollbar-hide">{children}</div>
           </div>
         </div>
       </body>
