@@ -5,7 +5,7 @@ import { PiCopyLight } from "react-icons/pi";
 
 const BookingLink = () => {
   const [copied, setCopied] = useState(false);
-  const bookingLink = "https://yourbusiness.com/book/ai-repair-service";
+  const bookingLink = "https://techstore.com/book?id=store123";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(bookingLink);
