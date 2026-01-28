@@ -4,7 +4,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 const Header = () => {
   return (
     <div>
-      <div className="p-4 mb-5 flex justify-between items-center bg-[#111B3C]">
+      <div className="p-5 z-10 flex justify-between items-center">
         <div>
           <p className="text-3xl text-white">Dashboard overview</p>
         </div>

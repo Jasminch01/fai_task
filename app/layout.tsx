@@ -28,7 +28,7 @@ export default function RootLayout({
             <div className="bg-[#111B3C]">
               <Header />
             </div>
-            <div className="flex-1 overflow-y-auto scrollbar-hide">{children}</div>
+            <div className="flex-1 overflow-y-auto scrollbar-hide pt-5">{children}</div>
           </div>
         </div>
       </body>
