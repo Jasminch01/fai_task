@@ -65,11 +65,8 @@ const Sidebar = () => {
         <div className="h-screen px-2 flex flex-col justify-between">
           <div>
             <div className="pt-24 flex justify-center">
-              <div className="p-3 rounded-xl bg-linear-to-t from-[#00FF88] to-[#00D4FF]">
-                <Link
-                  href={"/dashboard-overview"}
-                  onClick={handleMenuItemClick}
-                >
+              <Link href={"/dashboard-overview"} onClick={handleMenuItemClick}>
+                <div className="p-3 rounded-xl bg-linear-to-t from-[#00FF88] to-[#00D4FF]">
                   <Image
                     className="rounded-full size-8"
                     src={"/logo.png"}
@@ -77,8 +74,8 @@ const Sidebar = () => {
                     width={100}
                     height={100}
                   />
-                </Link>
-              </div>
+                </div>
+              </Link>
             </div>
 
             {/* Menu Links */}

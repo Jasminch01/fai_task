@@ -3,7 +3,7 @@ import Profile from "@/Components/Settings/Profile";
 const SettingsPage = () => {
     return (
         <div>
-            <div className="">
+            <div className="px-5">
                 <Profile/>
             </div>
         </div>
