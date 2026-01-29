@@ -17,12 +17,12 @@ const BookingLink = () => {
   return (
     <div className="mt-5">
       <div className="bg-linear-to-b from-[#1A1A2E] to-[#16213E] xl:py-10 xl:px-6 p-5 rounded-xl">
-        <p className="text-white text-lg mb-4 text-center xl:text-left">
+        <p className="text-white text-lg mb-4 text-center md:text-left">
           {" "}
           Booking Link
         </p>
-        <div className="flex xl:flex-row flex-col items-center xl:gap-x-3 gap-y-5">
-          <div className="xl:flex-1 bg-[#0F172B] border border-[#00FF8833] rounded-xl px-4 py-3">
+        <div className="flex md:flex-row flex-col items-center md:gap-x-3 gap-y-5">
+          <div className="md:flex-1 bg-[#0F172B] border border-[#00FF8833] rounded-xl px-4 py-3">
             <p className="text-gray-300 text-sm truncate">{bookingLink}</p>
           </div>
           <button
