@@ -157,6 +157,7 @@ const AppointmentDataTable = () => {
           data={appointmentData}
           customStyles={customStyles}
           pointerOnHover
+          responsive
         />
       </div>
     </div>

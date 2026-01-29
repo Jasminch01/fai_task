@@ -7,8 +7,8 @@ const CallLogsPage = () => {
     <div>
       <div className="px-5">
         {/* Search and Filters */}
-        <div className="mb-6 flex gap-4 items-center justify-between">
-          <div className="flex-1">
+        <div className="mb-6 xl:flex gap-x-4 items-center justify-between">
+          <div className="xl:flex-1">
             <div className="relative">
               <input
                 type="text"
@@ -30,8 +30,8 @@ const CallLogsPage = () => {
               </svg>
             </div>
           </div>
-          <div className="flex-1">
-            <div className="flex justify-end gap-x-10">
+          <div className="xl:flex-1">
+            <div className="xl:flex xl:justify-end gap-x-10">
               <div className="relative">
                 <select className="bg-[#0F172B80] text-white px-4 py-3 pr-10 rounded-lg border border-[#2B7FFF33] appearance-none cursor-pointer focus:outline-none">
                   <option value="">All Types</option>
@@ -78,7 +78,7 @@ const CallLogsPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-5">
+        <div className="xl:flex xl:gap-x-5 gap-y-5">
           <div className="flex-1">
             <CallList />
           </div>
