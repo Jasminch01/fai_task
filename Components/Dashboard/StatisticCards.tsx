@@ -46,7 +46,7 @@ const StatisticCards = () => {
   ];
   return (
     <div>
-      <div className="grid grid-cols-3 gap-y-5 gap-x-5 mb-5">
+      <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-y-5 gap-x-5 mb-5">
         {callMetrics.map((metric, idx) => (
           <div
             key={idx}

@@ -1,4 +1,5 @@
 import { arimo } from "@/fonts/font";
+import { GoDotFill } from "react-icons/go";
 
 const RecentActivityRepairRequest = () => {
   const recentActivities = [
@@ -94,8 +95,8 @@ const RecentActivityRepairRequest = () => {
     },
   ];
   return (
-    <div className="flex items-stretch space-x-5 justify-between mt-5">
-      <div className="px-10 py-5 rounded-xl bg-[#0F172B80] border border-[#2B7FFF33] flex-1">
+    <div className="xl:flex items-stretch xl:space-x-5 space-y-5 justify-between mt-5">
+      <div className="xl:px-10 px-5 py-5 rounded-xl bg-[#0F172B80] border border-[#2B7FFF33] xl:flex-1">
         <p className={`text-white text-2xl ${arimo.className}`}>
           Recent Activity
         </p>
@@ -103,11 +104,12 @@ const RecentActivityRepairRequest = () => {
           {recentActivities.map((activity) => (
             <div
               key={activity.id}
-              className="mt-4 flex items-baseline space-x-4 bg-[#1D293D80] py-2 px-5 rounded-lg"
+              className="mt-4 flex xl:items-baseline space-x-4 bg-[#1D293D80] py-2 px-3 xl:px-5 rounded-lg"
             >
-              <div
-                className={`size-2 rounded-full ${activity.status === "completed" ? "bg-green-500" : activity.status === "pending" ? "bg-yellow-500" : activity.status === "rescheduled" ? "bg-blue-500" : activity.status === "cancelled" ? "bg-red-500" : "bg-purple-500"}`}
-              ></div>
+              <GoDotFill 
+                className={` text-2xl xl:text-xl ${activity.status === "completed" ? "text-green-500" : activity.status === "pending" ? "text-yellow-500" : activity.status === "rescheduled" ? "text-blue-500" : activity.status === "cancelled" ? "text-red-500" : "text-purple-500"}`}
+              />
+
               <div>
                 <p className="text-white">{activity.title}</p>
                 <p className="text-gray-400 text-sm">{activity.time}</p>
