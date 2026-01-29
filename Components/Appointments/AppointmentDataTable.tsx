@@ -2,6 +2,7 @@
 "use client";
 
 import DataTable from "react-data-table-component";
+import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 
 const AppointmentDataTable = () => {
   const appointmentData = [
@@ -151,7 +152,7 @@ const AppointmentDataTable = () => {
 
   return (
     <div className="mt-5 max-w-full">
-      <div className="bg-[#0F172B80] border border-[#2B7FFF33] rounded-xl w-full">
+      <div className="bg-[#0F172B80] border border-[#2B7FFF33] rounded-xl w-full mb-5 xl:mb-0">
         <DataTable
           columns={columns}
           data={appointmentData}
@@ -159,6 +160,42 @@ const AppointmentDataTable = () => {
           pointerOnHover
           responsive
         />
+      </div>
+
+      <div className="flex justify-center xl:fixed xl:bottom-4 xl:left-1/2 xl:-translate-x-1/2 items-center gap-2 sm:gap-4 flex-wrap px-4 pb-5 xl:pb-0">
+        <button className="p-2 text-[#697077] hover:text-white transition-colors flex items-center gap-1 sm:gap-2 text-sm sm:text-base">
+          <GrFormPrevious size={20} className="shrink-0" />
+          <span className="hidden sm:inline">Previous</span>
+        </button>
+
+        <div className="flex items-center gap-1 sm:gap-2">
+          <button className="min-w-8 sm:min-w-9 h-8 sm:h-9 px-2 sm:px-3 text-[#0F62FE] text-xs sm:text-sm hover:text-white">
+            1
+          </button>
+          <button className="min-w-8 sm:min-w-9 h-8 sm:h-9 px-2 sm:px-4 text-[#0F62FE] text-xs sm:text-sm hover:text-white bg-[#A6C8FF]">
+            2
+          </button>
+          <button className="min-w-8 sm:min-w-9 h-8 sm:h-9 px-2 sm:px-3 text-[#0F62FE] text-xs sm:text-sm hover:text-white">
+            3
+          </button>
+          <button className="min-w-8 sm:min-w-9 h-8 sm:h-9 px-2 sm:px-3 text-[#0F62FE] text-xs sm:text-sm hover:text-white hidden xs:block">
+            4
+          </button>
+          <button className="min-w-8 sm:min-w-9 h-8 sm:h-9 px-2 sm:px-3 text-[#0F62FE] text-xs sm:text-sm hover:text-white hidden sm:block">
+            5
+          </button>
+          <span className="px-1 sm:px-2 text-[#0F62FE] text-xs sm:text-sm">
+            ...
+          </span>
+          <button className="min-w-8 sm:min-w-9 h-8 sm:h-9 px-2 sm:px-3 text-[#0F62FE] text-xs sm:text-sm hover:text-white">
+            11
+          </button>
+        </div>
+
+        <button className="p-2 text-[#0F62FE] hover:text-white transition-colors flex items-center gap-1 sm:gap-2 text-sm sm:text-base">
+          <span className="hidden sm:inline">Next</span>
+          <GrFormNext size={20} className="shrink-0" />
+        </button>
       </div>
     </div>
   );

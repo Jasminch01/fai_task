@@ -32,9 +32,9 @@ const Header = () => {
     <div>
       <div className="p-5 z-10 flex justify-between items-center">
         <div>
-          <p className="text-3xl text-white transform transition-all duration-300"> {navTitle}</p>
+          <p className="xl:text-3xl text-lg text-white transform transition-all duration-300"> {navTitle}</p>
         </div>
-        <div className="flex items-center gap-10">
+        <div className="flex items-center xl:gap-x-10 gap-x-5 mr-10">
           <div>
             <IoMdNotificationsOutline color="white" size={30} />
           </div>

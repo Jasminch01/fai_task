@@ -10,22 +10,22 @@ const CallDetails = () => {
         </div>
         <div className="px-5">
           <div className="mt-3">
-            <div className="flex items-center space-x-10">
-              <div className=" py-3">
+            <div className="flex items-start space-x-10">
+              <div className=" py-3 flex-1">
                 <p className="text-[#90A1B9]">Phone Number</p>
                 <p className=" text-white">+1 (555) 123-4567</p>
               </div>
-              <div className=" py-3">
+              <div className=" py-3 flex-1">
                 <p className="text-[#90A1B9]">Duration</p>
                 <p className=" text-white">4:32</p>
               </div>
             </div>
-            <div className="flex items-center space-x-10">
-              <div className=" py-3">
+            <div className="flex items-start space-x-10">
+              <div className=" py-3 flex-1">
                 <p className="text-[#90A1B9]">Date & Time</p>
                 <p className=" text-white">2025-12-16 10:45 AM</p>
               </div>
-              <div className=" py-3">
+              <div className=" py-3 flex-1">
                 <p className="text-[#90A1B9]">Issue Type</p>
                 <p className=" text-white">Screen</p>
               </div>
@@ -33,8 +33,8 @@ const CallDetails = () => {
           </div>
 
           <div className="py-3">
-            <p className="text-[#90A1B9]">Call Type</p>
-            <p className=" text-white">AI Resolved</p>
+            <p className="text-[#90A1B9] mb-3">Call Type</p>
+            <span className="rounded-xl border border-[#00C9504D] p-2 bg-linear-to-l from-[#00BC7D33] w-auto to-[#00C95033] text-sm text-[#05DF72]">AI Resolved</span>
           </div>
           <div className="py-3">
             <p className="text-[#90A1B9]">Outcome</p>
@@ -50,7 +50,7 @@ const CallDetails = () => {
 
           <div className="mt-5">
             <div className="text-white flex items-center space-x-2 ">
-              <IoDocumentTextOutline color="white" size={20} />
+              <IoDocumentTextOutline color="#51A2FF" size={20} />
               <p>Conversation Transcript</p>
             </div>
             <div className="mt-5">

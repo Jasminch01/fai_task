@@ -45,12 +45,12 @@ const Sidebar = () => {
   return (
     <>
       {/* Mobile sidebar Menu Icon */}
-      <div className="xl:hidden fixed top-5 left-5 z-50">
+      <div className="xl:hidden absolute top-5 right-2 z-10">
         <button
           onClick={toggleSidebar}
-          className="p-2 bg-linear-to-t from-[#00FF88] to-[#00D4FF] rounded-lg"
+          className="p-2"
         >
-          <FaBars className="text-xl" />
+          <FaBars className="text-xl" color="white" />
         </button>
       </div>
 
@@ -64,7 +64,7 @@ const Sidebar = () => {
       >
         <div className="h-screen px-2 flex flex-col justify-between">
           <div>
-            <div className="pt-24 flex justify-center">
+            <div className="xl:pt-24 pt-16 flex justify-center">
               <Link href={"/dashboard-overview"} onClick={handleMenuItemClick}>
                 <div className="p-3 rounded-xl bg-linear-to-t from-[#00FF88] to-[#00D4FF]">
                   <Image
@@ -84,7 +84,7 @@ const Sidebar = () => {
                 <li key={idx} className="list-none mb-4">
                   <Link
                     href={menu.link}
-                    className={`flex items-center text-white gap-5 px-5 py-3 transition-all duration-300 rounded-xl  ${
+                    className={`flex items-center text-white xl:gap-x-5 gap-x-3 xl:px-5 px-3 py-3 transition-all duration-300 rounded-xl  ${
                       pathname === menu.link
                         ? "bg-white/5 backdrop-blur-3xl shadow-[0_8px_32px_0_rgba(43,127,255,0.2)] border border-[#2B7FFF33]"
                         : "border border-transparent hover:bg-white/5 hover:backdrop-blur-3xl hover:shadow-[0_8px_32px_0_rgba(43,127,255,0.2)]"
@@ -92,16 +92,16 @@ const Sidebar = () => {
                     onClick={handleMenuItemClick}
                   >
                     {menu.link === "/dashboard-overview" && (
-                      <AiFillHome size={30} className="ml-2" />
+                      <AiFillHome className="ml-2 xl:text-3xl text-xl" />
                     )}
                     {menu.link === "/call-logs" && (
-                      <IoCallOutline size={30} className="ml-2" />
+                      <IoCallOutline className="ml-2 xl:text-3xl text-xl" />
                     )}
                     {menu.link === "/appointments" && (
-                      <CiCalendar size={30} className="ml-2" />
+                      <CiCalendar className="ml-2 xl:text-3xl text-xl" />
                     )}
                     {menu.link === "/settings" && (
-                      <GoGear size={30} className="ml-2" />
+                      <GoGear className="ml-2 xl:text-3xl text-xl" />
                     )}
                     <span>{menu.page}</span>
                   </Link>

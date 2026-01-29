@@ -7,8 +7,8 @@ const CallLogsPage = () => {
     <div>
       <div className="px-5">
         {/* Search and Filters */}
-        <div className="mb-6 xl:flex gap-x-4 items-center justify-between">
-          <div className="xl:flex-1">
+        <div className="mb-6 flex xl:flex-row flex-col gap-4 items-center justify-between">
+          <div className="xl:flex-1 w-full">
             <div className="relative">
               <input
                 type="text"
@@ -30,10 +30,10 @@ const CallLogsPage = () => {
               </svg>
             </div>
           </div>
-          <div className="xl:flex-1">
-            <div className="xl:flex xl:justify-end gap-x-10">
+          <div className="xl:flex-1 w-full">
+            <div className="flex xl:flex-row flex-col xl:justify-end gap-4">
               <div className="relative">
-                <select className="bg-[#0F172B80] text-white px-4 py-3 pr-10 rounded-lg border border-[#2B7FFF33] appearance-none cursor-pointer focus:outline-none">
+                <select className="bg-[#0F172B80] text-white px-4 py-3 pr-10 rounded-lg border border-[#2B7FFF33] appearance-none cursor-pointer focus:outline-none w-full sm:w-auto">
                   <option value="">All Types</option>
                   <option value="inbound">Inbound</option>
                   <option value="outbound">Outbound</option>
@@ -44,15 +44,11 @@ const CallLogsPage = () => {
               </div>
 
               <div className="relative">
-                <select className="bg-[#0F172B80] text-white px-4 py-3 pr-10 rounded-lg border border-[#2B7FFF33] appearance-none cursor-pointer focus:outline-none">
+                <select className="bg-[#0F172B80] text-white px-4 py-3 pr-10 rounded-lg border border-[#2B7FFF33] appearance-none cursor-pointer focus:outline-none w-full sm:w-auto">
                   <option value="">All Issues</option>
                   <option value="screen-repair">Screen Repair</option>
-                  <option value="battery-replacement">
-                    Battery Replacement
-                  </option>
                   <option value="water-damage">Water Damage</option>
                   <option value="charging-port">Charging Port</option>
-                  <option value="camera-replacement">Camera Replacement</option>
                   <option value="speaker-issue">Speaker Issue</option>
                   <option value="software-issue">Software Issue</option>
                 </select>
@@ -62,7 +58,7 @@ const CallLogsPage = () => {
               </div>
 
               <div className="relative">
-                <select className="bg-[#0F172B80] text-white px-4 py-3 pr-10 rounded-lg border border-[#2B7FFF33] appearance-none cursor-pointer focus:outline-none">
+                <select className="bg-[#0F172B80] text-white px-4 py-3 pr-10 rounded-lg border border-[#2B7FFF33] appearance-none cursor-pointer focus:outline-none w-full sm:w-auto">
                   <option value="">All Time</option>
                   <option value="today">Today</option>
                   <option value="yesterday">Yesterday</option>

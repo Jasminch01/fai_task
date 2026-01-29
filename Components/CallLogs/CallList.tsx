@@ -61,45 +61,58 @@ const CallList = () => {
     <div>
       <div className="bg-[#0F172B80] rounded-xl pt-5 h-auto border border-[#2B7FFF33]">
         <div className="border-b border-[#2B7FFF33] px-5 pb-3">
-          <p className={`text-white text-xl ${arimo.className}`}>Call List</p>
+          <p className={`text-white text-lg xl:text-xl ${arimo.className}`}>
+            Call List
+          </p>
         </div>
         <div className="overflow-hidden">
           {callLogs.map((log) => (
             <div
               key={log.id}
-              className="border-b border-[#2B7FFF33] px-5 py-3 space-y-3"
+              className="border-b border-[#2B7FFF33] px-4 sm:px-5 py-3 space-y-3"
             >
-              <div className="flex justify-between items-center">
-                <div className="flex justify-center items-center space-x-5">
-                  <div className="bg-linear-to-t from-[#2B7FFF] to-[#00B8DB] p-3 rounded-lg">
-                    <FiPhone color="white" size={20} />
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
+                <div className="flex items-center space-x-3 sm:space-x-5">
+                  <div className="bg-linear-to-t from-[#2B7FFF] to-[#00B8DB] p-2.5 sm:p-3 rounded-lg shrink-0">
+                    <FiPhone
+                      color="white"
+                      size={18}
+                      className="sm:w-5 sm:h-5"
+                    />
                   </div>
-                  <div>
-                    <p className={`text-white text-base`}>{log.phoneNumber}</p>
-                    <p className={`text-[#90A1B9] text-xs flex items-end`}>
-                      {log.date} <BsDot /> {log.time}
+                  <div className="min-w-0">
+                    <p className={`text-white text-sm sm:text-base truncate`}>
+                      {log.phoneNumber}
+                    </p>
+                    <p className={`text-[#90A1B9] text-xs flex items-center`}>
+                      <span className="truncate">{log.date}</span>{" "}
+                      <BsDot className="shrink-0" /> <span>{log.time}</span>
                     </p>
                   </div>
                 </div>
                 <div
-                  className={` bg-linear-to-t border ${log.callType === "AI Resolved" ? "from-[#00C95033] to-[#00BC7D33]  border-[#00C9504D]" : ""} ${log.callType === "Warm Transfer" ? "from-[#FF690033] to-[#FB2C3633] border-[#FF69004D]" : ""} ${log.callType === "Appointment" ? "from-[#2B7FFF33] to-[#00B8DB33] border-[#2B7FFF33]" : ""} ${log.callType === "Dropped" ? "from-[#FF150033] to-[#FB2C3633] border-[#FF69004D]" : ""} px-2 py-1 rounded`}
+                  className={`bg-linear-to-t border self-start sm:self-auto ${log.callType === "AI Resolved" ? "from-[#00C95033] to-[#00BC7D33] border-[#00C9504D]" : ""} ${log.callType === "Warm Transfer" ? "from-[#FF690033] to-[#FB2C3633] border-[#FF69004D]" : ""} ${log.callType === "Appointment" ? "from-[#2B7FFF33] to-[#00B8DB33] border-[#2B7FFF33]" : ""} ${log.callType === "Dropped" ? "from-[#FF150033] to-[#FB2C3633] border-[#FF69004D]" : ""} px-2.5 py-1 rounded-xl whitespace-nowrap`}
                 >
-                  <p className={`${log.callType === "AI Resolved" ? "text-[#00C950]" : ""} ${log.callType === "Warm Transfer" ? "text-[#FF8904]" : ""} ${log.callType === "Appointment" ? "text-[#51A2FF]" : ""} ${log.callType === "Dropped" ? "text-[#FF0404]" : ""}`}>{log.callType}</p>
+                  <p
+                    className={`text-xs sm:text-sm ${log.callType === "AI Resolved" ? "text-[#00C950]" : ""} ${log.callType === "Warm Transfer" ? "text-[#FF8904]" : ""} ${log.callType === "Appointment" ? "text-[#51A2FF]" : ""} ${log.callType === "Dropped" ? "text-[#FF0404]" : ""}`}
+                  >
+                    {log.callType}
+                  </p>
                 </div>
               </div>
-              <div className="flex space-x-5 items-center">
+              <div className="flex flex-wrap gap-3 sm:gap-5 items-center">
                 <div className="flex items-center space-x-2">
-                  <LuClock3 color="white" />
-                  <p className={`text-white`}>{log.duration}</p>
+                  <LuClock3 color="white" size={16} />
+                  <p className={`text-white text-sm`}>{log.duration}</p>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <SiTicktick className="text-[#90A1B9]" />
-                  <p className="text-[#90A1B9]">
+                <div className="flex items-center space-x-2 min-w-0 flex-1 sm:flex-initial">
+                  <SiTicktick className="text-[#90A1B9] shrink-0" size={16} />
+                  <p className="text-[#90A1B9] text-sm truncate">
                     {log.outcome}
                   </p>
                 </div>
-                <div className="bg-[#2B7FFF33] text-white px-2 py-1 rounded">
-                  <p>Screen</p>
+                <div className="bg-[#2B7FFF33] text-white px-2.5 py-1 rounded">
+                  <p className="text-xs sm:text-sm">{log.issueType}</p>
                 </div>
               </div>
             </div>
