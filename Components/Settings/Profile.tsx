@@ -46,7 +46,7 @@ const Profile = () => {
         <div>
           <button
             onClick={() => setActiveTab("profile")}
-            className={`pb-3 px-2 transition-colors relative cursor-pointer text-white text-2xl ${
+            className={`pb-3 px-2 transition-colors relative cursor-pointer text-white xl:text-2xl ${
               activetab === "profile"
                 ? "text-[#2B7FFF]"
                 : ""
@@ -61,7 +61,7 @@ const Profile = () => {
         <div>
           <button
             onClick={() => setActiveTab("password")}
-            className={`pb-3 px-2 transition-colors relative  cursor-pointer text-white text-2xl ${
+            className={`pb-3 px-2 transition-colors relative  cursor-pointer text-white xl:text-2xl ${
               activetab === "password"
                 ? "text-[#2B7FFF] "
                 : ""
