@@ -74,7 +74,7 @@ const CallLogsPage = () => {
             </div>
           </div>
         </div>
-        <div className="xl:flex xl:gap-x-5 gap-y-5">
+        <div className="xl:flex xl:gap-x-5 space-y-5">
           <div className="flex-1">
             <CallList />
           </div>
