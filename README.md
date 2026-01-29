@@ -1,19 +1,19 @@
-## Phone Repair Controller Dashboard (Frontend UI only)
+# Phone Repair Controller Dashboard (Frontend UI only)
 
 A modern responsive UI dashboard application for managing phone repair service. The system provides tools for repair for repair controllers and support teams to efficency to manage the appointments, coustomars call, profile , call logs, dashboard overview etc.
 
-## Installation & Setup
-# clone the repository
+# Installation & Setup
+## clone the repository
 ```bash
 https://github.com/Jasminch01/fai_task
 ```
 
-# Navigate to project folder
+## Navigate to project folder
 ```bash
 cd fai_task
 ```
 
-# install dependencies
+## install dependencies
 
 ```bash
 npm install
